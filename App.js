@@ -8,6 +8,7 @@ import Reels from './src/screens/Reels';
 import Activity from './src/screens/Activity';
 import Profile from './src/screens/Profile';
 import Ionic from 'react-native-vector-icons/Ionicons'
+import Status from './src/components/Status';
 
 export default function App() {
 
@@ -60,10 +61,9 @@ export default function App() {
           headerShown: false
         }}
       >
-        <Stack.Screen 
-          name="Bottom"
-          component={bottomTabScreen}
-        />
+        <Stack.Screen name="Bottom" component={bottomTabScreen} />
+        <Stack.Screen name="Status" component={Status} />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
