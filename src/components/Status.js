@@ -1,12 +1,31 @@
-import { View, Text,StatusBar, Image, TouchableOpacity, TextInput } from 'react-native'
-import React from 'react'
+import { View, Text,StatusBar, Image, TouchableOpacity, TextInput, Animated } from 'react-native'
+import React, {useEffect, useState} from 'react'
 import Ionic from 'react-native-vector-icons/Ionicons'
 import Feather from 'react-native-vector-icons/Feather'
 
 const Status = ({route, navigation}) => {
 
-    const {name} = route.params;
-    const {image} = route.params;
+    const {name, image} = route.params;
+
+    const [progress, setProgress] = useState(new Animated.Value(0))
+
+    useEffect (() => {
+        let timer = setTimeout(() => {
+            navigation.goBack();
+        }, 7000);
+
+        Animated.timing(progress, {
+            toValue: 5,
+            duration: 7000,
+            useNativeDriver: false,
+        }).start();
+        return () => clearTimeout(timer);
+    }, [])
+
+    const progressAnimation = progress.interpolate ({
+        inputRange: [0, 5],
+        outputRange: ['0%', '100%']
+    })
 
   return (
     <View
@@ -30,11 +49,11 @@ const Status = ({route, navigation}) => {
             top: 18,
         }}>
 
-            <View style={{
+            <Animated.View style={{
                 height: '100%',
                 backgroundColor: 'white',
-                width: '50%'
-            }}></View>
+                width: progressAnimation,
+            }}></Animated.View>
         </View>
 
         <View style={{
@@ -54,7 +73,7 @@ const Status = ({route, navigation}) => {
                 alignItems: 'center'
             }}>
                 <Image 
-                    source={image} 
+                    source={{uri: image}}
                     style={{
                     borderRadius: 100,
                     backgroundColor: 'orange',
@@ -74,7 +93,7 @@ const Status = ({route, navigation}) => {
                 </TouchableOpacity>
             </View>
         </View>
-        <Image source={image} style={{position: 'absolute', width: '100%', height: 600}} />
+        <Image source={{uri: image}} style={{position: 'absolute', width: '100%', height: 600}} />
         <View style={{
             position: 'absolute',
             bottom: 0,

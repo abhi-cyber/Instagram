@@ -47,7 +47,7 @@ const Stories = () => {
         {
             storyInfo.map((data,index) => {
                 return(
-                    <TouchableOpacity key={index} onPress={() => navigation.push('Status', {name: data.name, image: data.image})}>
+                    <TouchableOpacity key={index} onPress={() => navigation.navigate('Status', {name: data.name, image: data.image})}>
                         <View 
                             style={{flexDirection: 'column', paddingHorizontal: 8, position: 'relative'}}
                         >
