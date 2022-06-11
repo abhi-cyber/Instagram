@@ -14,6 +14,27 @@ const Post = () => {
             postImage: 'https://wegotthiscovered.com/wp-content/uploads/2021/08/How-Much-Weight-Can-Dwayne-The-Rock-Johnson-Lift.jpg',
             likes: 9878,
             isLiked: false
+        },
+        {
+            postTitle: "Dwayne Jhonson",
+            postPersonImage: "https://i.guim.co.uk/img/media/117c94b98725b126a0814024433f2d5513ce0c6a/0_550_3648_2188/master/3648.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=c610bf061b74dd399116d235f887d0de",
+            postImage: 'https://wegotthiscovered.com/wp-content/uploads/2021/08/How-Much-Weight-Can-Dwayne-The-Rock-Johnson-Lift.jpg',
+            likes: 9878,
+            isLiked: false
+        },
+        {
+            postTitle: "Dwayne Jhonson",
+            postPersonImage: "https://i.guim.co.uk/img/media/117c94b98725b126a0814024433f2d5513ce0c6a/0_550_3648_2188/master/3648.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=c610bf061b74dd399116d235f887d0de",
+            postImage: 'https://wegotthiscovered.com/wp-content/uploads/2021/08/How-Much-Weight-Can-Dwayne-The-Rock-Johnson-Lift.jpg',
+            likes: 9878,
+            isLiked: false
+        },
+        {
+            postTitle: "Dwayne Jhonson",
+            postPersonImage: "https://i.guim.co.uk/img/media/117c94b98725b126a0814024433f2d5513ce0c6a/0_550_3648_2188/master/3648.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=c610bf061b74dd399116d235f887d0de",
+            postImage: 'https://wegotthiscovered.com/wp-content/uploads/2021/08/How-Much-Weight-Can-Dwayne-The-Rock-Johnson-Lift.jpg',
+            likes: 9878,
+            isLiked: false
         }
     ]
 
