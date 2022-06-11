@@ -64,12 +64,12 @@ const Status = ({route, navigation}) => {
                 }} />
             </View>
             <View style={{
-                justifyContent: 'space-aound',
+                justifyContent: 'space-between',
                 flexDirection: 'row',
                 width: '100%'
             }}>
                 <Text style={{color:'white', fontSize: 15, paddingLeft: 10}}>{name}</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.goBack()}>
                     <Ionic name='close' style={{fontSize:20, color:'white', opicity: 0.6}} />
                 </TouchableOpacity>
             </View>
@@ -98,7 +98,7 @@ const Status = ({route, navigation}) => {
                     color: 'white',
                 }} 
             />
-            <TouchableOpacity onPress={() => navigation.goBack()}>
+            <TouchableOpacity>
                 <Feather name="navigation" style={{fontSize:30, color: 'white'}} />
             </TouchableOpacity>
         </View>

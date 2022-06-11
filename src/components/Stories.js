@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native'
 
 const Stories = () => {
 
-    const navigatioin = useNavigation();
+    const navigation = useNavigation();
 
     const storyInfo = [{
         id:1,
@@ -47,7 +47,7 @@ const Stories = () => {
         {
             storyInfo.map((data,index) => {
                 return(
-                    <TouchableOpacity key={index} onPress={() => navigatioin.push('Status', {name: data.name, image: data.image})}>
+                    <TouchableOpacity key={index} onPress={() => navigation.push('Status', {name: data.name, image: data.image})}>
                         <View 
                             style={{flexDirection: 'column', paddingHorizontal: 8, position: 'relative'}}
                         >
@@ -70,4 +70,4 @@ const Stories = () => {
   )
 }
 
-export default Stories
+export default Stories;

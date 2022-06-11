@@ -3,10 +3,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './src/screens/HomeScreen';
-import Search from './src/screens/Search';
-import Reels from './src/screens/Reels';
-import Activity from './src/screens/Activity';
-import Profile from './src/screens/Profile';
+import SearchScreen from './src/screens/SearchScreen';
+import ReelsScreen from './src/screens/ReelsScreen';
+import ActivityScreen from './src/screens/Activity';
+import ProfileScreen from './src/screens/ProfileScreen';
 import Ionic from 'react-native-vector-icons/Ionicons'
 import Status from './src/components/Status';
 
@@ -45,10 +45,10 @@ export default function App() {
       })}>
 
         <Tab.Screen name='Home' component={HomeScreen} />
-        <Tab.Screen name='Search' component={Search} />
-        <Tab.Screen name='Reels' component={Reels} />
-        <Tab.Screen name='Profile' component={Profile} />
-        <Tab.Screen name='Activity' component={Activity} />
+        <Tab.Screen name='Search' component={SearchScreen} />
+        <Tab.Screen name='Reels' component={ReelsScreen} />
+        <Tab.Screen name='Profile' component={ProfileScreen} />
+        <Tab.Screen name='Activity' component={ActivityScreen} />
 
       </Tab.Navigator>
     )
