@@ -1,14 +1,26 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, ScrollView } from "react-native";
+import React from "react";
+import SearchBox from "../components/SearchBox";
+import SearchContent from "../components/SearchContent";
 
 const Search = () => {
   return (
-    <View>
-      <Text>Search</Text>
+    <View
+      style={{
+        width: "100%",
+        height: "100%",
+        backgroundColor: "white",
+        position: "relative",
+      }}
+    >
+      <ScrollView>
+        <SearchBox />
+        <SearchContent />
+      </ScrollView>
     </View>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
