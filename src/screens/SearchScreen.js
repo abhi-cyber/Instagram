@@ -84,7 +84,7 @@ const Search = () => {
             <Image source={image} style={{ width: "100%", height: "80%" }} />
             <View
               style={{
-                justifyContent: "center",
+                justifyContent: "space-around",
                 width: "100%",
                 alignItems: "center",
                 flexDirection: "row",
